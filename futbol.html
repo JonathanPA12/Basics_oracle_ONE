@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>futbol</title>
+</head>
+<body>
+    
+    <script>
+        function saltarlinea(){
+    
+    document.write("<br>");
+    
+    }
+    
+    function imprimir(frase){
+        document.write(frase);
+        saltarlinea();
+    }
+    function estado(puntos){
+        let random = Math.random() * 30;
+        
+        if(puntos > random){
+             return "El equipo está mejor que el año pasado";
+        }else if(puntos == random){
+             return "El equipo está igual que el año pasado";
+        }else{
+             return "El equipo está peor que el año pasado";
+        }
+}
+    
+    let victorias = prompt("Ingrese el numero de victorias");
+    let empates = prompt("Ingrese el numero de empates");
+    let derrotas = prompt("Ingrese el numero de derrotas");
+    let puntos = 0;
+    puntos = (parseInt(victorias) * 3) + (parseInt(empates) * 1) + parseInt(derrotas) * 0;
+    imprimir("El numero de puntos es: " + puntos + " y "+ estado(puntos));
+
+    
+    
+    </script>
+</body>
+
+
+</html>

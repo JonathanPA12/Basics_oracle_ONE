@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de adivinanza</title>
+</head>
+<body>
+    <script>
+        function imprimir(frase){
+            document.write(frase);
+            saltarlinea();
+        }
+        function saltarlinea(){
+            document.write("<br>");
+        }
+        function adivinar(){
+            let numero = prompt("Ingrese un numero del 1 al 10");
+            let numeroRandom = Math.random() * 10;
+            numeroRandom = Math.round(numeroRandom);
+            if(numero == numeroRandom){
+                imprimir("Felicidades, adivinaste el numero");
+            }else{
+                imprimir("Lo siento, no adivinaste el numero y es: " + numeroRandom + " y tu numero era: " + numero);
+            }
+        }
+        adivinar();
+    </script>
+
+
+
+</body>
+</html>

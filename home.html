@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+
+    <h1>Jonathan <br>Pineda</h1>
+    <h2>Web Developer</h2>
+    <h3>Profile</h3>
+
+    <script>
+
+    alert("Esto es una alerta");
+    document.write("Esto es un mensaje desde <br> javascript");
+    document.write("<br>");
+    document.write("hoy es: " + Date());
+    document.write("<br>");
+    document.write("El usuario es: " + navigator.userAgent);
+    document.write("<br>");
+    document.write("su ubicacion es: " + navigator.geolocation);
+    document.write("<br>");
+    document.write("su plataforma es: " + navigator.platform);
+    document.write("<br>");
+    document.write("su lenguaje es: " + navigator.language);
+    document.write("<br>");
+    document.write("su suma de dos random es: " + sumar());
+   
+
+    function sumar(){
+
+        let resultado = random() + random();
+        return resultado;
+    }
+
+    function random(){
+        let numeroRandom  = Math.random() * 100;
+        return numeroRandom;
+    }
+   
+    </script>
+</body>
+</html>
