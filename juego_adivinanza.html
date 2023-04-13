@@ -15,14 +15,24 @@
             document.write("<br>");
         }
         function adivinar(){
-            let numero = prompt("Ingrese un numero del 1 al 10");
-            let numeroRandom = Math.random() * 10;
-            numeroRandom = Math.round(numeroRandom);
-            if(numero == numeroRandom){
-                imprimir("Felicidades, adivinaste el numero");
-            }else{
-                imprimir("Lo siento, no adivinaste el numero y es: " + numeroRandom + " y tu numero era: " + numero);
+
+            let intentos = 3;
+            let contador = 1;
+            let numeroRandom = Math.round(Math.random() * 10);
+            while(contador <= intentos){
+                let numero = prompt("Ingrese un numero del 1 al 10");
+            
+                  if(numero == numeroRandom){
+                     alert("Felicidades, adivinaste el numero en el intento "+ contador + " y es: " + numeroRandom + " y tu numero era: " + numero);
+                        break;
+                 }else{
+                  alert("Lo siento, no adivinaste el numero y es: " + numeroRandom + " y tu numero era: " + numero + " y te quedan " + (intentos - contador) + " intentos");
+                  }
+                    contador++;
+
             }
+
+          
         }
         adivinar();
     </script>
