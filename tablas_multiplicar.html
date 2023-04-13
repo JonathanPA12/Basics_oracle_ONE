@@ -20,12 +20,12 @@
         }
 
         function tablaMultiplicar(numero){
-            let contador = 1;
-            while(contador <= 12){
-                imprimir(numero + " x " + contador + " = " + (numero * contador));
-                contador++;
+          
+            for(let contador = 0; contador <= 12; contador++){
+                imprimir(parseInt(numero) + " x " + contador + " = " + (parseInt(numero) * contador));
             }
         }
+
 
         let numero = parseInt(prompt("Ingrese un numero"));
         tablaMultiplicar(numero);
